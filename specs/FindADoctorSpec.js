@@ -8,14 +8,14 @@ describe('To verify persistence of User profile', function () {
         home_page.open(URL);
     });
 
-    it('verify search doctor profile', async () => {
+    it('To verify search doctor profile', async () => {
         await home_page.navigate("FIND_A_DOCTOR");
         var isLoaded = await find_a_doc_page.isLoaded();
         expect(isLoaded).toBe.truthy;
         var docName = "WILLIAM AUFFERMANN"
         await find_a_doc_page.searchDoctor("WILLIAM AUFFERMANN");
         await find_a_doc_page.OpenDocProfile();
-        var name = find_a_doc_page.getDoctorName();
+        var name = await find_a_doc_page.getDoctorName();
         await find_a_doc_page.closeCurrentWindow();
         await find_a_doc_page.switchToParentWindow();
         expect(name).toContain(docName.split(" ")[0]);
@@ -23,7 +23,7 @@ describe('To verify persistence of User profile', function () {
         // await browser.sleep(5000);
     });
 
-    it('Verify the profile details', async function () {
+    it('To verify doctor profiles based on criteria filter', async function () {
         await home_page.navigate("FIND_A_DOCTOR");
         var isLoaded = await find_a_doc_page.isLoaded();
         expect(isLoaded).toBe.truthy;

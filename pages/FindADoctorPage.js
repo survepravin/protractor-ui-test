@@ -78,8 +78,8 @@ var FindADoctorPage = function () {
         });
     }
 
-    this.getDoctorName = () => {
-        return docName.getText();
+    this.getDoctorName = async () => {
+        return await docName.getText();
     }
 
     this.closeCurrentWindow = async () => {

@@ -32,3 +32,6 @@ npm test
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
+
+## Important Links
+[Protractor-Beautiful-Reporter](https://www.npmjs.com/package/protractor-beautiful-reporter)

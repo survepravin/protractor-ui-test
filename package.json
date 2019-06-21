@@ -6,7 +6,8 @@
   "devDependencies": {
     "jasmine": "^3.3.1",
     "mocha": "^6.1.4",
-    "protractor": "^5.4.2"
+    "protractor": "^5.4.2",
+    "protractor-beautiful-reporter": "^1.2.8"
   },
   "scripts": {
     "clean-webdriver": "webdriver-manager clean",

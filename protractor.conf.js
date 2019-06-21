@@ -1,3 +1,4 @@
+var HtmlReporter = require('protractor-beautiful-reporter');
 exports.config = {
 
   // address of the running server.
@@ -28,6 +29,18 @@ exports.config = {
   mochaOpts: {
     reporter: 'spec',
     timeout: 30000
+  },
+
+  onPrepare: function () {
+    // Add a screenshot reporter and store screenshots to `/tmp/screenshots`:
+    jasmine.getEnv().addReporter(new HtmlReporter({
+      baseDirectory: 'report',
+      screenshotsSubfolder: 'images',
+      jsonsSubfolder: 'jsons',
+      takeScreenShotsOnlyForFailedSpecs: true,
+      docTitle: 'My Reporter',
+      preserveDirectory: false
+    }).getJasmine2Reporter());
   }
 
 };
