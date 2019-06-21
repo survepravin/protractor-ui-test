@@ -1,0 +1,24 @@
+{
+  "name": "protractor-ui-test",
+  "version": "1.0.0",
+  "description": "protractor testing project",
+  "main": "index.js",
+  "devDependencies": {
+    "jasmine": "^3.3.1",
+    "mocha": "^6.1.4",
+    "protractor": "^5.4.2"
+  },
+  "scripts": {
+    "clean-webdriver": "webdriver-manager clean",
+    "update-webdriver": "webdriver-manager update --standalone --versions.standalone=3.8.0 --ignore_ssl",
+    "start-webdriver": "webdriver-manager start --versions.standalone=3.8.0",
+    "script": "protractor protractor.conf.js",
+    "start": "npm run update-webdriver & npm run start-webdriver",
+    "test": "npm run script "
+  },
+  "keywords": [
+    "protractor"
+  ],
+  "author": "surveP",
+  "license": "ISC"
+}
